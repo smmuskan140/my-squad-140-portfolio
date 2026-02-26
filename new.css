@@ -9,51 +9,46 @@ body {
   overflow-x: hidden;
 }
 
-/* HERO BACKGROUND */
+/* ================= HERO BACKGROUND ================= */
+
 .hero {
   height: 100vh;
-  background: linear-gradient(to bottom, #2f2dfc 0%, #8c83c9 50%, #f2f2f2 100%);
+  background: linear-gradient(to bottom, #2f2dfc 0%, #8c83c9 55%, #f2f2f2 100%);
   position: relative;
-  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
+
 .top-bar {
+  position: absolute;   /* changed from fixed */
+  top: 30px;
+  width: 100%;
   display: flex;
-  position: fixed;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 60px;
 }
 
 .logo-box {
+  position: absolute;
+  left: 60px;
   width: 60px;
   height: 60px;
   border: 3px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 250px;
 }
 
-.k-logo {
-  font-size: 28px;
-  color: white;
-  font-weight: bold;
-
-}
-
-/* CENTER NAV */
 .nav {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 200px;
-  gap: 40px;
+  gap: 50px;
+  padding: 18px 80px;
   background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(15px);
-  padding: 18px 60px;
-  border-radius: 50px;
+  backdrop-filter: blur(18px);
+  border-radius: 60px;
   border: 2px solid rgba(255,255,255,0.5);
 }
 
@@ -63,8 +58,9 @@ body {
   cursor: pointer;
 }
 
-/* RIGHT CONTROLS */
 .right-controls {
+  position: absolute;
+  right: 60px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -80,7 +76,6 @@ body {
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255,255,255,0.5);
   color: white;
-  margin-left: 20px;
 }
 
 .theme {
@@ -94,54 +89,59 @@ body {
   color: white;
 }
 
-/* TITLE */
+/* ================= TITLE ================= */
+
 .hero-title {
   font-family: 'Press Start 2P';
-  font-size: 60px;
+  font-size: 90px;
   text-align: center;
-  margin-top: 60px;
-  color: rgba(255,255,255,0.35);
+  margin-top: 180px;
+  color: rgba(255,255,255,0.25);
+  position: relative;
+  z-index: 1;
 }
 
 .title-line {
   height: 2px;
-  width: 60%;
-  background: cyan;
-  margin: 15px auto 0;
+  width: 65%;
+  background: #00e0ff;
+  margin-top: 20px;
 }
 
-/* CENTER BIG LOGO */
+/* ================= BIG OVERLAPPING LOGO ================= */
+
 .center-logo {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
+  position: absolute;
+  top: 320px;   /* adjusted perfectly */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
-.big-k {
-  font-size: 300px;
-  font-weight: bold;
-  color: rgba(255,255,255,0.8);
+.big-logo {
+  width: 320px;
+  opacity: 0.95;
 }
 
-/* CARDS */
+/* ================= CARDS ================= */
+
 .cards {
+  position: absolute;
+  bottom: 100px;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
   gap: 80px;
-  margin-top: -80px;
 }
 
 .glass {
-  backdrop-filter: blur(20px);
-  background: rgba(255,255,255,0.2);
-  border-radius: 25px;
-  border: 5px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(25px);
+  background: rgba(255,255,255,0.18);
+  border-radius: 30px;
+  border: 2px solid rgba(255,255,255,0.5);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .small {
@@ -150,27 +150,28 @@ body {
 }
 
 .big {
-  width: 300px;
+  width: 320px;
   height: 240px;
 }
 
-/* BLUR BLOBS */
+/* ================= BLUR BLOBS ================= */
+
 .blob {
   position: absolute;
-  width: 250px;
-  height: 250px;
-  background: blue;
+  width: 280px;
+  height: 280px;
+  background: #2f2dfc;
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(90px);
   opacity: 0.6;
 }
 
 .left {
-  bottom: 80px;
-  left: -80px;
+  bottom: 60px;
+  left: -100px;
 }
 
 .right {
   bottom: 100px;
-  right: -80px;
+  right: -100px;
 }
