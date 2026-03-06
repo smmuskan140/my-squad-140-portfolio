@@ -1,55 +1,23 @@
-'use client';
+﻿'use client';
 
-import React from 'react';
-
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
+export default function Footer() {
+  const year = new Date().getFullYear();
   return (
-    <footer className="bg-black/80 backdrop-blur-md border-t border-purple-500/30 py-12 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* About */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Squad 140</h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Building the future through innovation, collaboration, and passion.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-bold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#home" className="text-gray-300 hover:text-blue-300 transition">Home</a></li>
-              <li><a href="#mentors" className="text-gray-300 hover:text-blue-300 transition">Mentors</a></li>
-              <li><a href="#events" className="text-gray-300 hover:text-blue-300 transition">Events</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-blue-300 transition">Contact</a></li>
-            </ul>
-          </div>
-
-          {/* Follow */}
-          <div>
-            <h4 className="font-bold mb-4">Follow Us</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-gray-300 hover:text-blue-300 transition">Twitter</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-blue-300 transition">LinkedIn</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-blue-300 transition">GitHub</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-blue-300 transition">Instagram</a></li>
-            </ul>
-          </div>
+    <footer className="border-t border-white/15 bg-black/45 px-4 py-10">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
+        <div>
+          <p className="text-lg font-bold">Squad 140</p>
+          <p className="text-sm text-white/60">Built with consistency and teamwork.</p>
         </div>
-
-        {/* Divider */}
-        <div className="border-t border-purple-500/30 my-8" />
-
-        {/* Copyright */}
-        <div className="text-center text-gray-400 text-sm">
-          <p>&copy; {currentYear} Squad 140. All rights reserved. 🚀</p>
+        <div className="flex gap-5 text-sm text-white/80">
+          <a href="#home" className="hover:text-white">Home</a>
+          <a href="#resources" className="hover:text-white">Resources</a>
+          <a href="#events" className="hover:text-white">Projects</a>
+          <a href="#contact" className="hover:text-white">Contact</a>
         </div>
+        <p className="text-sm text-white/60">© {year} Squad 140</p>
       </div>
     </footer>
   );
-};
+}
 
-export default Footer;

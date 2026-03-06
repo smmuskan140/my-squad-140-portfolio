@@ -1,52 +1,28 @@
-'use client';
+﻿'use client';
 
-import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 
-const GallerySection: React.FC = () => {
-  const images = [
-    'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop',
-    'https://images.unsplash.com/photo-1552834961-6ddda530acff?w=500&h=500&fit=crop',
-    'https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=500&h=500&fit=crop',
-    'https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop',
-  ];
+const images = [
+  'https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&h=600&fit=crop',
+  'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=900&h=600&fit=crop',
+];
 
+export default function GallerySection() {
   return (
-    <section className="relative py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="section-title">Moments & Memories</h2>
-
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ staggerChildren: 0.1 }}
-          viewport={{ once: true }}
-        >
-          {images.map((image, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="rounded-xl overflow-hidden glass glass-hover h-64 md:h-72"
-            >
-              <div className="relative w-full h-full">
-                <Image
-                  src={image}
-                  alt={`Gallery ${index + 1}`}
-                  fill
-                  className="object-cover hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-            </motion.div>
+    <section className="px-4 py-20" id="images">
+      <div className="mx-auto max-w-7xl">
+        <h2 className="section-title">Gallery</h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {images.map((src, idx) => (
+            <div key={src} className="relative h-64 overflow-hidden rounded-2xl border border-white/15 md:h-72">
+              <Image src={src} alt={`Gallery ${idx + 1}`} fill className="object-cover transition duration-300 hover:scale-105" />
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
-};
+}
 
-export default GallerySection;

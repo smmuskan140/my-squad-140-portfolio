@@ -1,59 +1,34 @@
-'use client';
+﻿'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
+import { FolderKanban, Timer, Users } from 'lucide-react';
 
-const StatsSection: React.FC = () => {
-  const stats = [
-    { icon: '⏱️', label: 'Hours Invested', value: '1000+' },
-    { icon: '👥', label: 'Team Members', value: '46' },
-    { icon: '📁', label: 'Projects Built', value: '12' },
-  ];
+const stats = [
+  { label: 'Active Students', value: '46', Icon: Users },
+  { label: 'Projects Delivered', value: '12+', Icon: FolderKanban },
+  { label: 'Practice Hours', value: '1000+', Icon: Timer },
+];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  };
-
+export default function StatsSection() {
   return (
-    <section className="relative py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="glass glass-hover rounded-3xl p-8 text-center"
-            >
-              <div className="text-5xl mb-4">{stat.icon}</div>
-              <h3 className="text-xl font-bold mb-3">{stat.label}</h3>
-              <p className="text-4xl font-black text-blue-300">{stat.value}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+    <section className="px-4 py-20">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-3">
+        {stats.map((item, i) => (
+          <motion.article
+            key={item.label}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, delay: i * 0.08 }}
+            viewport={{ once: true }}
+            className="rounded-2xl border border-white/15 bg-white/5 p-8 text-center backdrop-blur"
+          >
+            <item.Icon className="mx-auto mb-4 h-10 w-10 text-blue-300" />
+            <p className="text-4xl font-black text-blue-200">{item.value}</p>
+            <p className="mt-2 text-white/80">{item.label}</p>
+          </motion.article>
+        ))}
       </div>
     </section>
   );
-};
+}
 
-export default StatsSection;

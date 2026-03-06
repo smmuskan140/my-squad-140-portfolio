@@ -1,4 +1,4 @@
-import Hero from '@/components/sections/Hero';
+﻿import Hero from '@/components/sections/Hero';
 import Navbar from '@/components/Navbar';
 import StatsSection from '@/components/sections/StatsSection';
 import MentorsSection from '@/components/sections/MentorsSection';
@@ -25,3 +25,4 @@ export default function Home() {
     </main>
   );
 }
+

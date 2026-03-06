@@ -1,91 +1,58 @@
-'use client';
+﻿'use client';
 
-import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-const Hero: React.FC = () => {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-
-  useEffect(() => {
-    // Glitch effect animation
-    const animateGlitch = () => {
-      if (titleRef.current) {
-        const glitchChars = '!@#$%^&*()_+-=[]{}|;:,.<>?';
-        const originalText = 'Squad 140';
-        
-        const glitchText = originalText
-          .split('')
-          .map((char) => {
-            if (Math.random() > 0.8) {
-              return glitchChars[Math.floor(Math.random() * glitchChars.length)];
-            }
-            return char;
-          })
-          .join('');
-
-        titleRef.current.textContent = glitchText;
-
-        setTimeout(() => {
-          if (titleRef.current) {
-            titleRef.current.textContent = originalText;
-          }
-        }, 100);
-      }
-    };
-
-    const interval = setInterval(animateGlitch, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
+export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen pt-20 px-4 flex items-center justify-center overflow-hidden">
-      {/* Floating background elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
+    <section id="home" className="relative min-h-screen overflow-hidden px-4 pt-24">
+      <div className="absolute -top-20 right-0 h-96 w-96 rounded-full bg-purple-500/20 blur-3xl" />
+      <div className="absolute bottom-8 left-0 h-80 w-80 rounded-full bg-blue-500/20 blur-3xl" />
 
-      <div className="relative z-10 text-center max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+      <div className="relative mx-auto flex min-h-[80vh] max-w-6xl flex-col items-center justify-center text-center">
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
+          className="rounded-full border border-white/20 px-4 py-1 text-sm text-blue-200"
         >
-          <h1
-            ref={titleRef}
-            className="text-6xl md:text-8xl font-black mb-6 tracking-tighter"
-            style={{
-              textShadow: '2px 0 #ff0000, -2px 0 #00ffff, 0 0 20px rgba(255, 255, 255, 0.5)',
-            }}
-          >
-            Squad 140
-          </h1>
-        </motion.div>
+          Portfolio of Squad 140
+        </motion.p>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.08 }}
+          className="mt-6 max-w-5xl text-5xl font-black leading-tight md:text-7xl"
+        >
+          We Build Real Projects,
+          <br />
+          Not Just Assignments
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mt-6 max-w-3xl text-lg text-white/80 md:text-2xl"
+        >
+          A focused cohort of 46 students shipping products with mentors, collaboration, and consistent execution.
+        </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.22 }}
+          className="mt-10 flex flex-wrap justify-center gap-4"
         >
-          <p className="text-2xl md:text-3xl text-blue-300 mb-8 font-mono tracking-wider">
-            Building the Future Together
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex gap-4 justify-center flex-wrap"
-        >
-          <button className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg transition-all hover:scale-105">
-            Learn More
-          </button>
-          <button className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-purple-700 transition-all">
-            Get Started
-          </button>
+          <a href="#events" className="rounded-lg bg-blue-500 px-7 py-3 font-semibold text-white hover:bg-blue-600">
+            View Projects
+          </a>
+          <a href="#contact" className="rounded-lg border border-white/50 px-7 py-3 font-semibold text-white hover:bg-white hover:text-black">
+            Contact Us
+          </a>
         </motion.div>
       </div>
     </section>
   );
-};
+}
 
-export default Hero;

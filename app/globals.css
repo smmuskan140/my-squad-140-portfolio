@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: #08060f;
+  --foreground: #f7f5ff;
+  --primary: #7c3aed;
+  --primary-foreground: #ffffff;
+  --muted: #140f2a;
+  --muted-foreground: #b9b5c9;
+  --ring: #7c3aed;
+}
+
+.dark {
+  --background: #000000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,23 +27,23 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Space Grotesk", "IBM Plex Sans", "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #5b21b6 100%);
+  background:
+    radial-gradient(1200px circle at 20% 10%, rgba(124, 58, 237, 0.25), transparent 55%),
+    radial-gradient(900px circle at 80% 30%, rgba(59, 130, 246, 0.2), transparent 50%),
+    linear-gradient(160deg, #08060f 0%, #130b2c 45%, #1a0f3a 100%);
   min-height: 100vh;
   color: #ffffff;
 }
 
-/* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.25);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -41,9 +55,8 @@ body {
   background: #3b82f6;
 }
 
-/* Utility Classes */
 .glass {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
 }
@@ -54,7 +67,7 @@ body {
 
 .glass-hover:hover {
   border-color: #60a5fa;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
   box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
 }
 
