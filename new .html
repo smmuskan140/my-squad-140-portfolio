@@ -1,125 +1,212 @@
-
-  <!-- NAVBAR 
-  <div class="top-bar">
-    <div class="logo-box">
-      <div class="k-logo">K</div>
-    </div>
-
-    <nav class="nav">
-      <a>Home</a>
-      <a>Mentors</a>
-      <a>Kalvians</a>
-      <a>Events</a>
-      <a>Contact</a>
-    </nav>
-
-    <div class="right-controls">
-      <div class="search">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <span>Inquire--</span>
-      </div>
-      <div class="theme">
-        <i class="fa-solid fa-moon"></i>
-      </div>
-    </div>
-  </div>
-
-  TITLE 
-  <h1 class="hero-title">Kalvium Squad 140</h1>
-
-
- CENTER LOGO 
-  <div class="center-logo">
-    <div class="big-k">K</div>
-  </div>
-
- GLASS CARDS 
-  <div class="cards">
-    <div class="glass small">Built time</div>
-    <div class="glass big">Team Members</div>
-    <div class="glass small">Number of projects</div>
-  </div>
-
- BLUR BLOBS 
-  <div class="blob left"></div>
-  <div class="blob right"></div>-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Kalvium Squad 140</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <link rel="stylesheet" href="new.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squad 140 | My Squad Portfolio</title>
+    <link rel="stylesheet" href="new.css">
 </head>
 <body>
-
-<section class="hero">
-
-  <!-- NAVBAR -->
-  <div class="top-bar">
-
-    <div class="logo-box">
-      <!-- Small SVG Logo -->
-      <svg viewBox="0 0 100 100" width="45">
-        <rect x="10" y="10" width="80" height="80" fill="none" stroke="white" stroke-width="8"/>
-        <path d="M30 20 V80 M30 50 L75 20 M30 50 L75 80"
-              stroke="white" stroke-width="8" fill="none"/>
-      </svg>
-    </div>
-
-    <nav class="nav">
-      <a>Home</a>
-      <a>Mentors</a>
-      <a>Kalvians</a>
-      <a>Events</a>
-      <a>Contact</a>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Squad Logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#mentors" class="nav-link">Mentors</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="inquire-btn">Inquire →</button>
+        </div>
     </nav>
 
-    <div class="right-controls">
-      <div class="search">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <span>Inquire--</span>
-      </div>
-      <div class="theme">
-        <i class="fa-solid fa-moon"></i>
-      </div>
-    </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Squad 140</h1>
+            <p class="hero-subtitle">Building the future together</p>
+        </div>
+    </section>
 
-  </div>
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">⏱️</div>
+                <h3>Built time</h3>
+                <p class="stat-value">XX Hours</p>
+            </div>
+            <div class="stat-card team-members">
+                <div class="logo-display">
+                    <img src="team-logo.png" alt="Team Logo">
+                </div>
+                <h3>Team Members</h3>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <h3>Number of projects</h3>
+                <p class="stat-value">XX Projects</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- TITLE -->
-  <h1 class="hero-title">Kalvium Squad 140</h1>
-  <div class="title-line"></div>
+    <!-- Our Mentors Section -->
+    <section id="mentors" class="mentors-section">
+        <h2 class="section-title">Our Mentors</h2>
+        <div class="mentors-container">
+            <div class="mentor-card">
+                <img src="mentor1.jpg" alt="Mentor 1" class="mentor-image">
+                <div class="mentor-info">
+                    <h3 class="mentor-name">MENTOR</h3>
+                    <p class="mentor-title">NAME | Designation</p>
+                    <p class="mentor-description">Academic Mentor focused on student development, problem-solving excellence and career readiness through technology-driven learning</p>
+                    <div class="mentor-socials">
+                        <a href="#" class="social-icon">✉️</a>
+                        <a href="#" class="social-icon">💼</a>
+                        <a href="#" class="social-icon">🐙</a>
+                    </div>
+                </div>
+            </div>
 
-  <!-- BIG OVERLAPPING LOGO -->
-  <div class="center-logo">
-    <svg viewBox="0 0 100 100" class="big-logo">
-      <rect x="10" y="10" width="80" height="80" fill="none" stroke="white" stroke-width="6"/>
-      <path d="M30 20 V80 M30 50 L75 20 M30 50 L75 80"
-            stroke="white" stroke-width="6" fill="none"/>
-    </svg>
-  </div>
+            <div class="mentor-card">
+                <img src="mentor2.jpg" alt="Mentor 2" class="mentor-image">
+                <div class="mentor-info">
+                    <h3 class="mentor-name">MENTOR</h3>
+                    <p class="mentor-title">NAME | Designation</p>
+                    <p class="mentor-description">Academic Mentor focused on student development, problem-solving excellence and career readiness through technology-driven learning</p>
+                    <div class="mentor-socials">
+                        <a href="#" class="social-icon">✉️</a>
+                        <a href="#" class="social-icon">💼</a>
+                        <a href="#" class="social-icon">🐙</a>
+                    </div>
+                </div>
+            </div>
 
-  <!-- GLASS CARDS -->
-  <div class="cards">
-    <div class="glass small">Built time</div>
-    <div class="glass big">Team Members</div>
-    <div class="glass small">Number of projects</div>
-  </div>
+            <div class="mentor-card">
+                <img src="mentor3.jpg" alt="Mentor 3" class="mentor-image">
+                <div class="mentor-info">
+                    <h3 class="mentor-name">MENTOR</h3>
+                    <p class="mentor-title">NAME | Designation</p>
+                    <p class="mentor-description">Academic Mentor focused on student development, problem-solving excellence and career readiness through technology-driven learning</p>
+                    <div class="mentor-socials">
+                        <a href="#" class="social-icon">✉️</a>
+                        <a href="#" class="social-icon">💼</a>
+                        <a href="#" class="social-icon">🐙</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- BLUR BLOBS -->
-  <div class="blob left"></div>
-  <div class="blob right"></div>
+    <!-- Kalvians Section -->
+    <section class="kalvians-section">
+        <h2 class="section-title">Kalvians</h2>
+        <div class="members-container">
+            <div class="member-card">
+                <img src="member1.jpg" alt="Member 1" class="member-image">
+                <div class="member-info">
+                    <h3 class="member-name">MENTOR</h3>
+                    <p class="member-title">NAME | Designation</p>
+                    <p class="member-description">Academic Mentor focused on student development, problem-solving excellence and career readiness through technology-driven learning</p>
+                    <div class="member-socials">
+                        <a href="#" class="social-icon">✉️</a>
+                        <a href="#" class="social-icon">💼</a>
+                        <a href="#" class="social-icon">🐙</a>
+                    </div>
+                </div>
+            </div>
 
-</section>
-<script src="new.js"></script>
+            <div class="member-card">
+                <img src="member2.jpg" alt="Member 2" class="member-image">
+                <div class="member-info">
+                    <h3 class="member-name">MENTOR</h3>
+                    <p class="member-title">NAME | Designation</p>
+                    <p class="member-description">Academic Mentor focused on student development, problem-solving excellence and career readiness through technology-driven learning</p>
+                    <div class="member-socials">
+                        <a href="#" class="social-icon">✉️</a>
+                        <a href="#" class="social-icon">💼</a>
+                        <a href="#" class="social-icon">🐙</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-card">
+                <img src="member3.jpg" alt="Member 3" class="member-image">
+                <div class="member-info">
+                    <h3 class="member-name">MENTOR</h3>
+                    <p class="member-title">NAME | Designation</p>
+                    <p class="member-description">Academic Mentor focused on student development, problem-solving excellence and career readiness through technology-driven learning</p>
+                    <div class="member-socials">
+                        <a href="#" class="social-icon">✉️</a>
+                        <a href="#" class="social-icon">💼</a>
+                        <a href="#" class="social-icon">🐙</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="check-members-btn">Check out all of our members</button>
+    </section>
+
+    <!-- Our Events Section -->
+    <section id="events" class="events-section">
+        <h2 class="section-title">Our Events</h2>
+        <div class="events-container">
+            <div class="event-card klaps-event">
+                <div class="event-content">
+                    <h3>KLAPS SESSION</h3>
+                    <p class="event-description">This is the stage where you practically and actively work on all our hearts</p>
+                    <ul class="event-details">
+                        <li>Brain storm on ideas</li>
+                        <li>Documentation</li>
+                        <li>Collaboration</li>
+                        <li>Feel free to ask me anything</li>
+                    </ul>
+                </div>
+                <div class="event-image">
+                    <img src="klaps.jpg" alt="KLAPS Event">
+                </div>
+            </div>
+
+            <div class="event-info klaps-info">
+                <h3>klaps</h3>
+                <p>KLAPS is an exciting educational event designed to bring the entire class together for a day of learning, collaboration, and growth. The KLAPS session encourages students to actively participate, share ideas, and grow together in a supportive environment.</p>
+                <p>This event featuring workshops, insightful mini-seminars, and fun learning activities that help students enhance their skills and boost their confidence. KLAPS is not just about gaining knowledge, it's about building connections and improving communication, and creativity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kalvium Engineering Protocol Section -->
+    <section class="kep-section">
+        <div class="kep-content">
+            <h3>KALVIUM ENGINEERING PROTOCOL</h3>
+            <p>Synthesizing real-world industry leaders through high-performance work-integrated learning</p>
+        </div>
+    </section>
+
+    <!-- System Mindset Section -->
+    <section class="mindset-section">
+        <h3>SYSTEM MINDSET</h3>
+        <p>"Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away."</p>
+        <p>Every individual in our community emphasizes continuous improvement, introspection, and wise resource selection based on success.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2>CONTACT US</h2>
+            <p>We'd love to hear from you! Whether you have a question, feedback, collaboration ideas, or just want to connect, feel free to reach out</p>
+            <div class="contact-icons">
+                <a href="#" class="contact-icon">✉️</a>
+                <a href="#" class="contact-icon">💼</a>
+                <a href="#" class="contact-icon">🐙</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="new.js"></script>
 </body>
 </html>
