@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jersey 10', sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #3d30f1, #ffffff);
+  color: white;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+.circle {
+  padding: 10px;
+}
+
+/* GLASS */
+.glass {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.bg-text {
+  font-size: clamp(40px, 8vw, 90px);
+  opacity: 0.15;
+}
+
+.main-logo {
+  font-size: clamp(80px, 12vw, 160px);
+  margin: 30px 0;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat {
+  padding: 30px;
+  min-width: 180px;
+}
+
+/* BLOBS */
+.blob {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #3d30f1, transparent);
+  filter: blur(60px);
+}
+
+.b1 { left: -50px; bottom: 0; }
+.b2 { right: -50px; top: 50px; }
+
+/* SECTIONS */
+.section {
+  padding: 60px 20px;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: clamp(40px,6vw,70px);
+  color: #6c63ff;
+  margin-bottom: 40px;
+}
+
+/* CARDS */
+.card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.card img {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.info {
+  flex: 1;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* BUTTON */
+button {
+  display: block;
+  margin: 30px auto;
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: none;
+  background: #3d30f1;
+  color: white;
+}
+
+/* EVENTS */
+.events {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.poster {
+  width: 280px;
+  height: 380px;
+  background: #ccc;
+}
+
+/* FOOTER */
+footer {
+  background: #3d30f1;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.contact {
+  padding: 20px;
+  max-width: 300px;
+}
+
+/* 📱 MOBILE FIXES */
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .icons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .events {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
