@@ -2,177 +2,148 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Jersey 10', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: linear-gradient(180deg, #3d30f1, #ffffff);
-  color: white;
+  background: linear-gradient(180deg, #2d2bff, #dcdcdc);
+  height: 100vh;
+  overflow-x: hidden;
 }
 
-/* NAV */
-.nav {
+/* NAVBAR */
+.navbar {
+  width: 90%;
+  margin: 20px auto;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
   align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
-  padding: 10px 20px;
-}
-
-.circle {
-  padding: 10px;
-}
-
-/* GLASS */
-.glass {
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(20px);
+  gap: 30px;
+  background: rgba(255,255,255,0.1);
+  padding: 12px 30px;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+.toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  cursor: pointer;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  margin-top: 40px;
+  color: white;
   position: relative;
 }
 
-.bg-text {
-  font-size: clamp(40px, 8vw, 90px);
-  opacity: 0.15;
+.hero h1 {
+  font-size: 60px;
+  opacity: 0.2;
 }
 
-.main-logo {
-  font-size: clamp(80px, 12vw, 160px);
-  margin: 30px 0;
+.big-logo {
+  font-size: 150px;
+  font-weight: bold;
+  margin: 20px 0;
 }
 
-.stats {
+/* CARDS */
+.cards {
   display: flex;
-  gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
 }
 
-.stat {
-  padding: 30px;
-  min-width: 180px;
+.card {
+  width: 200px;
+  height: 120px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 /* BLOBS */
 .blob {
   position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: -1;
+}
+
+.blob1 {
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, #3d30f1, transparent);
-  filter: blur(60px);
+  background: #2d2bff;
+  bottom: 50px;
+  left: 100px;
 }
 
-.b1 { left: -50px; bottom: 0; }
-.b2 { right: -50px; top: 50px; }
+.blob2 {
+  width: 250px;
+  height: 250px;
+  background: #5c5cff;
+  right: 100px;
+  bottom: 50px;
+}
 
-/* SECTIONS */
+/* SECTION */
 .section {
-  padding: 60px 20px;
-}
-
-.section h2 {
   text-align: center;
-  font-size: clamp(40px,6vw,70px);
-  color: #6c63ff;
-  margin-bottom: 40px;
+  margin-top: 100px;
+  font-size: 40px;
+  color: #5c5cff;
+  font-weight: bold;
 }
 
-/* CARDS */
-.card {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 900px;
-}
-
-.card img {
-  border-radius: 50%;
-  width: 100px;
-}
-
-.info {
-  flex: 1;
-}
-
-.icons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* BUTTON */
-button {
-  display: block;
-  margin: 30px auto;
-  padding: 15px 25px;
-  border-radius: 30px;
-  border: none;
-  background: #3d30f1;
-  color: white;
-}
-
-/* EVENTS */
-.events {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.poster {
-  width: 280px;
-  height: 380px;
-  background: #ccc;
-}
-
-/* FOOTER */
-footer {
-  background: #3d30f1;
-  padding: 40px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-}
-
-.contact {
-  padding: 20px;
-  max-width: 300px;
-}
-
-/* 📱 MOBILE FIXES */
-@media (max-width: 768px) {
-
-  .nav-links {
-    display: none;
-  }
-
-  .card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .icons {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .events {
-    flex-direction: column;
-    align-items: center;
-  }
-
+/* DARK MODE (optional) */
+.dark {
+  background: #111;
 }

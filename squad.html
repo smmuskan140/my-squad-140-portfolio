@@ -1,124 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kalvium Squad 140</title>
+  <meta charset="UTF-8">
+  <title>Kalvium Squad UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <link rel="stylesheet" href="squad.css"/>
+  <!-- CSS -->
+  <link rel="stylesheet" href="squad.css">
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <div class="logo">K</div>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo">K</div>
 
-  <div class="nav-links glass">
-    <a>Home</a>
-    <a>Mentors</a>
-    <a>Kalvians</a>
-    <a>Events</a>
-    <a>Contact</a>
-  </div>
-
-  <div class="circle glass">🌙</div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <h1 class="bg-text">Kalvium Squad 140</h1>
-
-  <div class="main-logo">K</div>
-
-  <div class="stats">
-    <div class="glass stat">Built time</div>
-    <div class="glass stat">Team Members</div>
-    <div class="glass stat">Projects</div>
-  </div>
-
-  <div class="blob b1"></div>
-  <div class="blob b2"></div>
-</section>
-
-<!-- MENTORS -->
-<section class="section">
-  <h2>Our Mentors</h2>
-
-  <div class="card glass">
-    <img src="https://via.placeholder.com/120">
-    <div class="info">
-      <h3>MENTOR</h3>
-      <p><b>THAKUR RISHWANT</b></p>
-      <p>Academic Mentor focused on student development...</p>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Mentors</a>
+      <a href="#">Kalvians</a>
+      <a href="#">Events</a>
+      <a href="#">Contact</a>
     </div>
-    <div class="icons">
-      <i data-lucide="mail"></i>
-      <i data-lucide="linkedin"></i>
-      <i data-lucide="github"></i>
+
+    <div class="right-icons">
+      <input type="text" class="search" placeholder="Inquire...">
+      <div class="toggle"></div>
     </div>
   </div>
 
-</section>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Kalvium Squad 140</h1>
+    <div class="big-logo">K</div>
 
-<!-- KALVIANS -->
-<section class="section gradient">
-  <h2>Kalvians</h2>
-
-  <div class="card glass">
-    <img src="https://via.placeholder.com/120">
-    <div class="info">
-      <h3>MENTOR</h3>
-      <p><b>THAKUR RISHWANT</b></p>
-      <p>Same description...</p>
-    </div>
-    <div class="icons">
-      <i data-lucide="mail"></i>
-      <i data-lucide="linkedin"></i>
-      <i data-lucide="github"></i>
+    <div class="cards">
+      <div class="card">Built time</div>
+      <div class="card">Team Members</div>
+      <div class="card">Number of projects</div>
     </div>
   </div>
 
-  <button>Check out all of our members</button>
-</section>
+  <!-- BLOBS -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
 
-<!-- EVENTS -->
-<section class="section">
-  <h2>Our events</h2>
+  <!-- SECTION -->
+  <div class="section">Our Mentors</div>
 
-  <div class="events">
-    <div class="poster"></div>
-
-    <div class="event-text">
-      <h3>Klaps</h3>
-      <p>KLAPS is an exciting educational event...</p>
-    </div>
-  </div>
-</section>   
-
-<!-- FOOTER -->
-<footer>
-  <div>
-    <h3>KALVIUM ENGINEERING PROTOCOL</h3>
-    <p>Synthesizing real-world industry leaders...</p>
-  </div>
-
-  <div class="glass contact">
-    <h3>CONTACT US</h3>
-    <p>We’d love to hear from you...</p>
-    <div class="icons">
-      <i data-lucide="mail"></i>
-      <i data-lucide="linkedin"></i>
-      <i data-lucide="github"></i>
-    </div>
-  </div>
-</footer>
-
-<script>
-  lucide.createIcons();
-</script>
+  <!-- JS -->
+  <script src="squad.js"></script>
 
 </body>
 </html>
