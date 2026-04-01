@@ -87,9 +87,10 @@ body {
   font-size: 150px;
   font-weight: bold;
   margin: 20px 0;
+  
 }
 
-/* CARDS */
+
 .cards {
   display: flex;
   justify-content: center;
